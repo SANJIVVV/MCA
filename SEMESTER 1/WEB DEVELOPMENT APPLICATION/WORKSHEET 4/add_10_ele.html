@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add 10 Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Add 10 to Every Element</h2>
+
+<input type="text" id="input" placeholder="5,10,15,20">
+<br>
+
+<button onclick="execute()">Execute</button>
+<br>
+
+<textarea id="output" readonly></textarea>
+
+<script>
+function execute() {
+
+    let arr = document.getElementById("input").value.split(",").map(Number);
+
+    let result = [];
+
+    arr.forEach(function(num) {
+        result.push(num + 10);
+    });
+
+    document.getElementById("output").value = result.join("\n");
+}
+</script>
+
+<footer>
+    © 26MX217 | Sanjivkumar
+</footer>
+
+</body>
+</html>

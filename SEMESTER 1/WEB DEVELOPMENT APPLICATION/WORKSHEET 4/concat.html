@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concat Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Combine Two Arrays Using concat()</h2>
+
+<input type="text" id="input" placeholder="10,20,30,40">
+<br>
+
+<button onclick="execute()">Execute</button>
+<br>
+
+<textarea id="output" readonly></textarea>
+
+<script>
+function execute() {
+
+    let arr = document.getElementById("input").value.split(",").map(Number);
+
+    let middle = arr.length / 2;
+
+    let first = arr.slice(0, middle);
+    let second = arr.slice(middle);
+
+    let result = first.concat(second);
+
+    document.getElementById("output").value = result.join("\n");
+}
+</script>
+
+<footer>
+    © 26MX217 | SanjivKumar
+</footer>
+
+</body>
+</html>

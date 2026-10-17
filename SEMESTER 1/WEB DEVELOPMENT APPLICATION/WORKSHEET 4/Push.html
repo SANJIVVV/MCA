@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Push Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Add Element Using push()</h2>
+
+<input type="text" id="input" placeholder="10,20,30">
+<br>
+
+<button onclick="execute()">Execute</button>
+<br>
+
+<textarea id="output" readonly></textarea>
+
+<script>
+function execute() {
+    let arr = document.getElementById("input").value.split(",").map(Number);
+
+    arr.push(100);
+
+    document.getElementById("output").value = arr.join("\n");
+}
+</script>
+
+<footer>
+    © 26MX217 | Sanjivkumar
+</footer>
+
+</body>
+</html>

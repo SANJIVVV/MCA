@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stack</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Stack Using push() and pop()</h2>
+
+<input type="text" id="input" placeholder="Enter element">
+<br>
+
+<button onclick="pushElement()">Push</button>
+<button onclick="popElement()">Pop</button>
+<button onclick="displayStack()">Display Stack</button>
+
+<br>
+
+<textarea id="output" rows="8" readonly></textarea>
+
+<script>
+
+let stack = [];
+
+function pushElement() {
+
+    let value = document.getElementById("input").value;
+
+    if (value == "") {
+        alert("Enter a value");
+        return;
+    }
+
+    stack.push(value);
+
+    document.getElementById("input").value = "";
+
+    displayStack();
+}
+
+function popElement() {
+
+    if (stack.length == 0) {
+
+        document.getElementById("output").value = "Stack Empty";
+
+    } else {
+
+        stack.pop();
+
+        displayStack();
+    }
+}
+
+function displayStack() {
+
+    if (stack.length == 0) {
+
+        document.getElementById("output").value = "Stack Empty";
+
+    } else {
+
+        document.getElementById("output").value = stack.join("\n");
+    }
+}
+
+</script>
+
+<footer>
+    © 26MX217 | Sanjivkumar
+</footer>
+
+</body>
+</html>

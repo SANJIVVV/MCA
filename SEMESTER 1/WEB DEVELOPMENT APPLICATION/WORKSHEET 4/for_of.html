@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Of Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Find Square Using for...of</h2>
+
+<input type="text" id="input" placeholder="2,4,6,8">
+<br>
+
+<button onclick="execute()">Execute</button>
+<br>
+
+<textarea id="output" readonly></textarea>
+
+<script>
+function execute() {
+
+    let arr = document.getElementById("input").value.split(",").map(Number);
+
+    let result = "";
+
+    for (let num of arr) {
+        result += num + " -> " + (num * num) + "\n";
+    }
+
+    document.getElementById("output").value = result;
+}
+</script>
+
+<footer>
+    © 26MX217 | Sanjivkumar
+</footer>
+
+</body>
+</html>

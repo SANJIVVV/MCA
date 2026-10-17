@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Numbers</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Add All Even Numbers</h2>
+
+<input type="text" id="input" placeholder="10,15,20,25,30">
+<br>
+
+<button onclick="execute()">Execute</button>
+<br>
+
+<textarea id="output" readonly></textarea>
+
+<script>
+function execute() {
+
+    let arr = document.getElementById("input").value.split(",").map(Number);
+
+    let sum = 0;
+    let even = "";
+
+    for (let num of arr) {
+
+        if (num % 2 == 0) {
+            even += num + " ";
+            sum += num;
+        }
+    }
+
+    document.getElementById("output").value =
+        "Even numbers: " + even + "\nSum: " + sum;
+}
+</script>
+
+<footer>
+    © 26MX217 | Sanjivkumar
+</footer>
+
+</body>
+</html>
