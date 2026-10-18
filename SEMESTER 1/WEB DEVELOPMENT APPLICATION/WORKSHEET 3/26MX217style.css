@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4ff;
+    margin: 0;
+}
+
+header {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.container {
+    width: 60%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h2 {
+    text-align: center;
+    color: #1e3a5f;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #1e3a5f;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #1e3a5f;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1e90ff;
+}
+
+input:hover, select:hover {
+    background-color: #f2f8ff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #1e3a5f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    background-color: green;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 12px;
+    margin-top: 30px;
+}
+
+.success {
+    width: 60%;
+    margin: 150px auto;
+    text-align: center;
+    color: green;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}

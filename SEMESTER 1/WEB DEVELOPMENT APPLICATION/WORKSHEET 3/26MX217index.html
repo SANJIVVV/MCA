@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="26MX217style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Registration System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Student Personal Details</h2>
+
+    <form action="26MX217success.html">
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label>Name:</label>
+            <input type="text"
+                   name="name"
+                   pattern="[A-Za-z ]+"
+                   title="Enter alphabets and spaces only"
+                   required>
+
+            <label>Alphanumeric ID:</label>
+            <input type="text"
+                   name="id"
+                   pattern="[A-Za-z0-9]+"
+                   title="Enter alphabets and numbers only"
+                   required>
+
+            <label>Phone Number:</label>
+            <input type="tel"
+                   name="phone"
+                   pattern="[6-9][0-9]{9}"
+                   title="Enter exactly 10 digits starting with 6-9"
+                   required>
+
+            <label>Email ID:</label>
+            <input type="email"
+                   name="email"
+                   pattern="^[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,}$"
+                   title="Enter a valid email address"
+                   required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Address Details</legend>
+
+            <label>District:</label>
+            <select name="district" required>
+                <option>Coimbatore</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Salem</option>
+                <option>Trichy</option>
+                <option>Erode</option>
+            </select>
+
+            <label>Village / Town / City:</label>
+            <select name="place" required>
+                <option>Coimbatore</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Salem</option>
+            </select>
+
+            <label>Postal Code:</label>
+            <input type="text"
+                   name="postal"
+                   pattern="6[0-9]{5}"
+                   title="Enter exactly 6 digits starting with 6"
+                   required>
+
+        </fieldset>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</div>
+
+<footer>
+    © 2026 Student Registration System. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+```
