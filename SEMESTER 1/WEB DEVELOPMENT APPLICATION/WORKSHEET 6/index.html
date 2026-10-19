@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LMS</span>
+      <span>Leave Management System<small>PSG TECH</small></span>
+    </a>
+  </header>
+
+  <main class="login-layout">
+    <section class="auth-panel">
+      <p class="eyebrow">PORTAL AUTHENTICATION</p>
+      <h1>Welcome Back</h1>
+      <p class="muted">Sign in to manage leave applications.</p>
+
+      <form id="loginForm">
+        <label for="loginEmail">Username</label>
+        <input id="loginEmail" type="text" required
+               placeholder="Enter username">
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" required
+               placeholder="Enter password">
+
+        <label for="roles">Access Role</label>
+        <select id="roles" required>
+          <option value="">Select Role</option>
+          <option value="student">Student</option>
+          <option value="tutor">Tutor</option>
+        </select>
+
+        <p id="loginMessage" class="message"></p>
+        <button class="button button-wide" type="submit">Login</button>
+      </form>
+
+      <div class="demo-box">
+        <strong>Demo Credentials</strong>
+        <p>Student: sanjiv / Student@123</p>
+        <p>Tutor: tutor / Tutor@123</p>
+      </div>
+    </section>
+
+    <section class="side-panel">
+      <span class="side-icon">✓</span>
+      <p class="eyebrow">CAMPUS CONNECT</p>
+      <h2>Leave requests, made simple.</h2>
+      <p>Apply for leave, track your request, and review applications through one portal.</p>
+      <div class="feature-list">
+        <span>✓ Student applications</span>
+        <span>✓ Tutor approval</span>
+        <span>✓ Leave status tracking</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Leave Management System · PSG TECH · © Sanjiv · 26MX217
+  </footer>
+</body>
+</html>

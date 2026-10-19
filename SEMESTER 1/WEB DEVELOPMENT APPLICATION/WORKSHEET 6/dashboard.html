@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS - Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="student">
+  <header class="topbar">
+    <a class="brand" href="dashboard.html">
+      <span class="brand-mark">LMS</span>
+      <span>Student Dashboard<small>PSG TECH</small></span>
+    </a>
+    <nav class="nav-links">
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="#apply">Apply Leave</a>
+      <button class="nav-button" id="logoutButton">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">STUDENT PORTAL</p>
+      <h1>Welcome, <span id="studentName">Student</span></h1>
+      <p class="muted">Apply for leave and track its status.</p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="info-card">
+        <p class="muted">Total Requests</p>
+        <h2 id="totalCount">0</h2>
+      </article>
+      <article class="info-card">
+        <p class="muted">Pending</p>
+        <h2 id="pendingCount">0</h2>
+      </article>
+      <article class="info-card">
+        <p class="muted">Approved</p>
+        <h2 id="approvedCount">0</h2>
+      </article>
+    </section>
+
+    <section class="form-card" id="apply">
+      <p class="eyebrow">NEW APPLICATION</p>
+      <h2>Create Leave Application</h2>
+
+      <form id="leaveForm">
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="leaveType">Leave Type</label>
+            <select id="leaveType" required>
+              <option value="">Select Type</option>
+              <option>Casual Leave</option>
+              <option>Sick Leave</option>
+              <option>Long Leave</option>
+              <option>Medical Leave</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="fromDate">From Date</label>
+            <input id="fromDate" type="date" required>
+          </div>
+
+          <div class="field-group">
+            <label for="toDate">To Date</label>
+            <input id="toDate" type="date" required>
+          </div>
+
+          <div class="field-group full-width">
+            <label for="reason">Reason for Leave</label>
+            <textarea id="reason" rows="3" required
+              placeholder="Enter your reason"></textarea>
+          </div>
+        </div>
+
+        <p id="leaveMessage" class="message"></p>
+        <button class="button" type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <section class="form-card">
+      <p class="eyebrow">REQUEST HISTORY</p>
+      <h2>My Leave History</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Type</th><th>From</th>
+              <th>To</th><th>Reason</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="myLeaveRows"></tbody>
+        </table>
+      </div>
+      <p class="muted" id="emptyHistory">No leave requests yet.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Leave Management System · PSG TECH · © Sanjiv · 26MX217
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+[
+  {
+    "id": 1,
+    "username": "sanjiv",
+    "fromDate": "2026-11-14",
+    "toDate": "2026-11-20",
+    "leaveType": "Sick Leave",
+    "reason": "Health is not good",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "username": "bala",
+    "fromDate": "2026-10-25",
+    "toDate": "2026-10-28",
+    "leaveType": "Sick Leave",
+    "reason": "Health is not good",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "username": "kavin",
+    "fromDate": "2026-10-14",
+    "toDate": "2026-10-20",
+    "leaveType": "Casual Leave",
+    "reason": "Personal work",
+    "status": "Approved"
+  }
+]

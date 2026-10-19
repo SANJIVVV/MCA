@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS - Tutor Approval</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="tutor">
+  <header class="topbar">
+    <a class="brand" href="approval.html">
+      <span class="brand-mark">LMS</span>
+      <span>Tutor Review Center<small>PSG TECH</small></span>
+    </a>
+    <nav class="nav-links">
+      <a class="active" href="approval.html">Review Requests</a>
+      <button class="nav-button" id="logoutButton">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">TUTOR PORTAL</p>
+      <h1>Leave Approval Center</h1>
+      <p class="muted">Review, approve, or reject student applications.</p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="info-card">
+        <p class="muted">Total Requests</p>
+        <h2 id="tutorTotal">0</h2>
+      </article>
+      <article class="info-card">
+        <p class="muted">Pending Review</p>
+        <h2 id="tutorPending">0</h2>
+      </article>
+      <article class="info-card">
+        <p class="muted">Approved</p>
+        <h2 id="tutorApproved">0</h2>
+      </article>
+    </section>
+
+    <section class="form-card">
+      <h2>All Leave Applications</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Student</th><th>Type</th>
+              <th>From</th><th>To</th><th>Reason</th>
+              <th>Status</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="allLeaveRows"></tbody>
+        </table>
+      </div>
+      <p id="emptyRequests" class="muted">No leave requests available.</p>
+      <p id="approvalMessage" class="message"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Leave Management System · PSG TECH · © Sanjiv · 26MX217
+  </footer>
+</body>
+</html>
